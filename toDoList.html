@@ -6,32 +6,50 @@
 </head>
 <body>
 <h1 align = "center">TO-DO LIST</h1>
-	<div  align=center"">
-		<form style= "float:center-left;" action="todocheck.html" method="get">
-			<strong>Task</strong> : <input type="text" name="task" placeholder=" Enter task">
-			<br /><br />
-			<strong>Priority:</strong>	
-			<select name="priority">
-				<option value="Normal" selected>Normal</option>
-				<option value="High">High</option>
-				<option value = "Low">Low</option>
-			</select> <br /><br />
-			<strong>Status:</strong>
-			<select name="status">
-				<option value="notStarted" selected>Not Started</option>
-				<option value="Completed">Completed</option>
-				<option value = "onGoing">On Going</option>
-			</select>
-			<br /><br />
-			<strong>Start Date</strong> : <input type="date" name="startdate" placeholder=" Enter startdate">
-			<br /><br />
-			<strong>Due date</strong> : <input type="date" name="duedate" placeholder=" Enter due task">
-			<br /><br />
-			<strong>% completes</strong> : <input type="text" value = "0" name="task">
-			<br /><br />
-			<input type="submit" value="Submit">
-			<input type="reset" value="Reset">
-		</form>
+	<div align = "center">
+		<table >
+			
+			<form action="todocheck.html" method="get">
+				<tr>
+				<td><strong>Task:</strong></td>
+				<td><input type="text" name="task" placeholder=" Enter task"></td>
+				</tr>
+				
+				<tr>
+				<td><strong>Priority:</strong></td>	
+				<td><select name="priority">
+					<option value="Normal" selected>Normal</option>
+					<option value="High">High</option>
+					<option value = "Low">Low</option>
+				</td>
+				</select> <br /><br />
+				</tr>
+				<tr>
+				<td><strong>Status:</strong></td>
+				<td><select name="status">
+					<option value="notStarted" selected>Not Started</option>
+					<option value="Completed">Completed</option>
+					<option value = "onGoing">On Going</option>
+				</select></td>
+				</tr>
+				<tr>
+				<td><strong>Start Date:</strong></td>
+				<td><input type="date" name="startdate" placeholder=" Enter startdate"></td>
+				</tr>
+				<tr>
+				<td><strong>Due date:</strong></td>
+				<td><input type="date" name="duedate" placeholder=" Enter due task"></td>
+				</tr>
+				<tr>
+				<td><strong>% completes:</strong></td>
+				<td><input type="text" value = "0" name="task"></td>
+				</tr>
+				
+				<tr>
+				<td><input type="submit" value="Submit"></td>
+				<td><input type="reset" value="Reset"></td>
+			</form>
+		</table>
 	</div>
 
 </body>
