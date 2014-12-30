@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+
+	/**--------------------------
+	//* Validate Date Field script- By JavaScriptKit.com
+	//* For this script and 100s more, visit http://www.javascriptkit.com
+	//* This notice must stay intact for usage
+	---------------------------**/
+
+	function checkdate(input){
+	var validformat=/^\d{2}\/\d{2}\/\d{4}$/ //Basic check for format validity
+	var returnval=false
+	if (!validformat.test(input.value))
+	alert("Invalid Date Format. Please correct and submit again.")
+	else{ //Detailed check for valid date ranges
+	var monthfield=input.value.split("/")[0]
+	var dayfield=input.value.split("/")[1]
+	var yearfield=input.value.split("/")[2]
+	var dayobj = new Date(yearfield, monthfield-1, dayfield)
+	if ((dayobj.getMonth()+1!=monthfield)||(dayobj.getDate()!=dayfield)||(dayobj.getFullYear()!=yearfield))
+	alert("Invalid Day, Month, or Year range detected. Please correct and submit again.")
+	else
+	returnval=true
+	}
+	if (returnval==false) input.select()
+	return returnval
+	}
+
+	</script>
+<title>Test web page</title>
+</head>
+<body>
+<h1 align = "center">TO-DO LIST</h1>
+	<div align = "center">
+		<table>
+			
+			<form onSubmit = "return checkdate(this.startDate)" onsubmit = "return checkdate(this.duedate)"action="todocheck.html" method="get">
+				<tr>
+				<td><strong>Task:</strong></td>
+				<td><input type="text" name="task" placeholder=" Enter task" required="required"></td>
+				</tr>
+				
+				<tr>
+				<td><strong>Priority:</strong></td>	
+				<td><select name="priority">
+					<option value="Normal" selected>Normal</option>
+					<option value="High">High</option>
+					<option value = "Low">Low</option>
+				</td>
+				</select> <br /><br />
+				</tr>
+				
+				<tr>
+				<td><strong>Status:</strong></td>
+				<td><select name="status">
+					<option value="notStarted" selected>Not Started</option>
+					<option value="Completed">Completed</option>
+					<option value = "onGoing">On Going</option>
+				</select></td>
+				</tr>
+				<tr>
+				<td><strong>Start Date:</strong></td>
+				<td><input type="date" name="startdate" placeholder=" Enter startdate"></td>
+				</tr>
+				<tr>
+				<td><strong>Due date:</strong></td>
+				<td><input type="date" name="duedate" on placeholder=" Enter due task"></td>
+				</tr>
+				<tr>
+				<td><strong>% completes:</strong></td>
+				<td><input type="text" value = "0" name="task"></td>
+				</tr>
+				
+				<tr>
+				<td><input type="submit" value="Submit"></td>
+				<td align = "right"><input type="reset" value="Reset"></td>
+			</form>
+		</table>
+	</div>
+
+</body>
+</html>
