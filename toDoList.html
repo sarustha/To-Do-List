@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Test web page</title>
+</head>
+<body>
+<h1 align = "center">TO-DO LIST</h1>
+	<div  align=center"">
+		<form style= "float:center-left;" action="todocheck.html" method="get">
+			<strong>Task</strong> : <input type="text" name="task" placeholder=" Enter task">
+			<br /><br />
+			<strong>Priority:</strong>	
+			<select name="priority">
+				<option value="Normal" selected>Normal</option>
+				<option value="High">High</option>
+				<option value = "Low">Low</option>
+			</select> <br /><br />
+			<strong>Status:</strong>
+			<select name="status">
+				<option value="notStarted" selected>Not Started</option>
+				<option value="Completed">Completed</option>
+				<option value = "onGoing">On Going</option>
+			</select>
+			<br /><br />
+			<strong>Start Date</strong> : <input type="date" name="startdate" placeholder=" Enter startdate">
+			<br /><br />
+			<strong>Due date</strong> : <input type="date" name="duedate" placeholder=" Enter due task">
+			<br /><br />
+			<strong>% completes</strong> : <input type="text" value = "0" name="task">
+			<br /><br />
+			<input type="submit" value="Submit">
+			<input type="reset" value="Reset">
+		</form>
+	</div>
+
+</body>
+</html>
