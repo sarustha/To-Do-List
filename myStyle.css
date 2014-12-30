@@ -1,3 +1,29 @@
-body{
+Table{
 	background-color : lightblue;
+	border : 1px solid black;
+	height  : 300px;
+	width : 300px;
+	background-image: url("todolist1.jpg");
+	background-repeat : no-repeat;
+	background-position : center;
+	background-size : 300px 300px;
+}
+
+.aaa{
+border-radius: 3px;
+outline: none;
+border: none;
+height: 30px;
+}
+
+.bb{
+border-radius: 3px;
+outline: none;
+border: none;
+height: 20px;
+vertical-align : center;
+}
+
+strong{
+	color: #2E8B57;
 }

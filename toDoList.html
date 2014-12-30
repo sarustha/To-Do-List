@@ -5,19 +5,19 @@
 <title>Test web page</title>
 </head>
 <body>
-<h1 align = "center">TO-DO LIST</h1>
+<h1 color = "red" align = "center">TO-DO LIST</h1>
 	<div align = "center">
 		<table >
 			
 			<form action="todocheck.html" method="get">
 				<tr>
-				<td><strong>Task:</strong></td>
-				<td><input type="text" name="task" placeholder=" Enter task"></td>
+				<td class = "cc"><strong>Task:</strong></td>
+				<td><input class = "aaa" type="text" name="task" placeholder=" Enter task"></td>
 				</tr>
 				
 				<tr>
-				<td><strong>Priority:</strong></td>	
-				<td><select name="priority">
+				<td ><strong>Priority:</strong></td>	
+				<td padding=5px><select name="priority">
 					<option value="Normal" selected>Normal</option>
 					<option value="High">High</option>
 					<option value = "Low">Low</option>
@@ -26,7 +26,7 @@
 				</tr>
 				<tr>
 				<td><strong>Status:</strong></td>
-				<td><select name="status">
+				<td ><select name="status">
 					<option value="notStarted" selected>Not Started</option>
 					<option value="Completed">Completed</option>
 					<option value = "onGoing">On Going</option>
@@ -34,20 +34,20 @@
 				</tr>
 				<tr>
 				<td><strong>Start Date:</strong></td>
-				<td><input type="date" name="startdate" placeholder=" Enter startdate"></td>
+				<td><input class="aaa" type="date" name="startdate" placeholder=" Enter startdate"></td>
 				</tr>
 				<tr>
 				<td><strong>Due date:</strong></td>
-				<td><input type="date" name="duedate" placeholder=" Enter due task"></td>
+				<td><input class="aaa" type="date" name="duedate" placeholder=" Enter due task"></td>
 				</tr>
 				<tr>
 				<td><strong>% completes:</strong></td>
-				<td><input type="text" value = "0" name="task"></td>
+				<td><input class="aaa" type="text" value = "0" name="task"></td>
 				</tr>
 				
 				<tr>
-				<td><input type="submit" value="Submit"></td>
-				<td><input type="reset" value="Reset"></td>
+				<td align = "center"><input class="bb" type="submit" value="Submit"></td>
+				<td align = "center"><input class="bb" type="reset" value="Reset"></td>
 			</form>
 		</table>
 	</div>
