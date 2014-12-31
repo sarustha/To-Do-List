@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<title>New Div</title>
+	</head>
+	<body>
+		
+			<input  type="text" id="myinput" onchange="newdiv();">
+			<!-- <input type="button" onclick="newdiv();" value="Click Me!"> -->
+		<script type="text/javascript">
+		function newdiv(){
+			var a=document.createElement('div');
+			var element=document.getElementById('myinput');
+			a.innerHTML=element.value+"<br >";
+			var x=document.getElementById('first');
+			x.appendChild(a);
+		}
+		</script>
+
+		<div id="first"></div>
+		
+		
+	</body>
+</html>
