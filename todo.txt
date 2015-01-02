@@ -1,0 +1,42 @@
+<html>
+	<head>
+		<title>New Div</title>
+	</head>
+	<body>
+		
+			<input  type="text" id="myinput" onchange="newdiv();">
+			<!-- <input type="button" onclick="newdiv();" value="Click Me!"> -->
+		<script type="text/javascript">
+		var count=0;
+		function newdiv(){
+			var a=document.createElement('div');
+			var element=document.getElementById('myinput');
+			count++;
+			a.id=count;
+			a.innerHTML=element.value+"<br >";
+			var x=document.getElementById('first');
+			x.appendChild(a);
+		}
+
+		function seconddiv(){
+			var a=document.createElement("div");
+			var element=document.getElementById('second');
+			
+			for(var i=1;i<=count;i++)
+			{
+				a.innerHTML += document.getElementById(i).innerHTML+"<hr>";	
+			}
+			element.appendChild(a);
+		}
+		</script>
+		<table width=100%>
+			<tr><input  type="text" id="myinput" onchange="newdiv();"></tr>
+			<tr>
+				<div id="first" ></div>
+			<input type = "button" value = "List" onclick ="seconddiv()">
+			<div id = "second"></div>
+			</tr>
+		</table>
+		
+	</body>
+</html>
